@@ -1,0 +1,91 @@
+{% load static %}
+{% include 'header.html' %}
+{% include 'banner.html' %}	
+	<div id="page">
+		<div class="featured-post">
+			
+		</div>
+		<div id="content">
+			<div class="post">
+				<h2 class="title"><a href="#">Welcome to universal informatics</a></h2>
+                <h3>Register Page</h3>
+				<font color="orange">{{msg}}</font>
+				<form method="post" action={{curl}}register/>
+				{% csrf_token %}
+				<table>
+					<tr>
+					 <td>Name</td>
+					 <td><input type="text" name="name" placeholder="Enter Name"></td>
+					</tr>
+					
+					<tr>
+					<td>UserName</td>
+					<td><input type="text" name="username" placeholder="Enter User Name"></td>
+					</tr>                       
+					
+					<tr>
+					<td>Password</td>
+					<td><input type="password" name="password" placeholder="Enter Password"></td>
+					</tr>
+					
+					<tr>
+					<td>Mobile</td>
+					<td><input type="text" name="mobile" placeholder="Enter mobile number"></td>
+					</tr>
+					
+					<tr>
+					<td>Address</td>
+					<td><input type="text" name="address" placeholder="Enter address"></td>
+					</tr>
+					
+					<tr>
+					<td>City</td>
+					<td>
+					<select name="city">
+					<option>Select City</option>
+					<option>Indore</option>
+					<option>Bhopal</option>
+					<option>Ujjain</option>
+					<option>Dewas</option>
+					</select>
+					</td>
+					</tr>
+					
+					<tr>
+					<td>Gender</td>
+					<td><input type="radio" name="gender" value="male"> Male
+					<input type="radio" name="gender" value="female"> Female
+					</td>
+					</tr>
+					
+					<tr>
+					<td><input type="submit" value="Register"/> </td>
+					</tr>                   
+					</table>
+					
+			</div>
+			
+		</div>
+		<div id="sidebar">
+			<ul>
+				<li>
+					<h2>Social links</h2>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Instagram</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">Linkedin</a></li>
+						<li><a href="#">Gmail</a></li>
+						<li><a href="#">Telegram</a></li>
+					</ul>
+				</li>
+				
+				
+			</ul>
+		</div>
+		
+	
+</div>
+{% include 'footer.html' %}
+</body>
+</html>
